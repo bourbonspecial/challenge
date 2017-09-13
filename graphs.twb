@@ -596,12 +596,12 @@
       <column caption='Bch' datatype='real' name='[bch]' role='measure' type='quantitative' />
       <column caption='Cad3' datatype='real' name='[cad3]' role='measure' type='quantitative' />
       <column caption='Dphe1' datatype='real' name='[dphe1]' role='measure' type='quantitative' />
-      <column caption='Groups' datatype='integer' name='[groups]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Groups' datatype='integer' name='[groups]' role='dimension' type='ordinal' />
       <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
       <column caption='Msb4' datatype='real' name='[msb4]' role='measure' type='quantitative' />
       <column caption='Msb5' datatype='real' name='[msb5]' role='measure' type='quantitative' />
       <column caption='Rapa2' datatype='real' name='[rapa2]' role='measure' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.0825175' measure-ordering='alphabetic' measure-percentage='0.80979' parameter-percentage='0.107692' show-structure='true' user-set-layout='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.155245' measure-ordering='alphabetic' measure-percentage='0.738462' parameter-percentage='0.106294' show-structure='true' user-set-layout='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
       </semantic-values>
@@ -615,6 +615,46 @@
     </datasource>
   </datasources>
   <worksheets>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data challenge test' name='federated.1urdkbe1pkzyey17bllnm1t9cwxe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1urdkbe1pkzyey17bllnm1t9cwxe'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='Sum' caption='Groups' datatype='integer' name='[groups]' role='dimension' type='ordinal' />
+            <column-instance column='[groups]' derivation='None' name='[none:groups:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcto:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:groups:ok]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:groups:ok]' />
+              <groupfilter function='member' level='[none:groups:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:groups:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[pcto:sum:Number of Records:qk]</rows>
+        <cols>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:groups:ok]</cols>
+      </table>
+    </worksheet>
     <worksheet name='Variable Distributions'>
       <table>
         <view>
@@ -1107,7 +1147,7 @@
         </edge>
       </cards>
     </window>
-    <window class='worksheet' maximized='true' name='cad3 v cadm2'>
+    <window class='worksheet' name='cad3 v cadm2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1136,8 +1176,106 @@
         </highlight>
       </viewpoint>
     </window>
+    <window class='worksheet' maximized='true' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <node-selection select-tuples='false'>
+            <oriented-node-reference orientation='horizontal'>
+              <node-reference>
+                <fields>
+                  <field>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:groups:ok]</field>
+                </fields>
+                <multibucket>
+                  <bucket>%null%</bucket>
+                </multibucket>
+              </node-reference>
+              <page-reference />
+            </oriented-node-reference>
+          </node-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:groups:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
   </windows>
   <thumbnails>
+    <thumbnail height='192' name='Sheet 4' width='187'>
+      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
+    </thumbnail>
     <thumbnail height='105' name='Variable Distributions' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAABpCAYAAABszywhAAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAAMoElEQVR4nO2de1gU1xmH32XVBSwmgvdLk+KtmsYmcVCwYlOqJGnTGKslJsbE2DbEpLY2
