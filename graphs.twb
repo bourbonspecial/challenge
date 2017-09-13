@@ -1,0 +1,1451 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10300.17.0615.2100                               -->
+<workbook original-version='10.3' source-build='10.3.1 (10300.17.0615.2100)' source-platform='win' version='10.3' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='10.3'>
+      <aliases enabled='yes' />
+      <column caption='bin size' datatype='real' name='[Cad3 (bin) Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.050000000000000003'>
+        <calculation class='tableau' formula='0.050000000000000003' />
+        <range />
+      </column>
+    </datasource>
+    <datasource caption='data challenge test' inline='true' name='federated.1urdkbe1pkzyey17bllnm1t9cwxe' version='10.3'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data challenge test' name='textscan.1t749sn1ppdahp1b3tybq0p51gkk'>
+            <connection class='textscan' directory='C:/Users/Remus Knowles/python/challenge' filename='data challenge test.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1t749sn1ppdahp1b3tybq0p51gkk' name='data challenge test.csv' table='[data challenge test#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='integer' name='groups' ordinal='1' />
+            <column datatype='real' name='X2dg' ordinal='2' />
+            <column datatype='real' name='Am.Chl2' ordinal='3' />
+            <column datatype='real' name='AMCL1' ordinal='4' />
+            <column datatype='real' name='AmT' ordinal='5' />
+            <column datatype='real' name='aza1' ordinal='6' />
+            <column datatype='real' name='Aza2' ordinal='7' />
+            <column datatype='real' name='bch' ordinal='8' />
+            <column datatype='real' name='Bref.3' ordinal='9' />
+            <column datatype='real' name='Bref4' ordinal='10' />
+            <column datatype='real' name='BSO' ordinal='11' />
+            <column datatype='real' name='cad3' ordinal='12' />
+            <column datatype='real' name='Cadm2' ordinal='13' />
+            <column datatype='real' name='Citric' ordinal='14' />
+            <column datatype='real' name='CoCl' ordinal='15' />
+            <column datatype='real' name='CoCl2' ordinal='16' />
+            <column datatype='real' name='DPHE.3' ordinal='17' />
+            <column datatype='real' name='dphe1' ordinal='18' />
+            <column datatype='real' name='MelAB.1' ordinal='19' />
+            <column datatype='real' name='MelAB2' ordinal='20' />
+            <column datatype='real' name='MS' ordinal='21' />
+            <column datatype='real' name='MSB3' ordinal='22' />
+            <column datatype='real' name='msb4' ordinal='23' />
+            <column datatype='real' name='msb5' ordinal='24' />
+            <column datatype='real' name='NaBu' ordinal='25' />
+            <column datatype='real' name='NaCl' ordinal='26' />
+            <column datatype='real' name='NaLac' ordinal='27' />
+            <column datatype='real' name='NaOthv' ordinal='28' />
+            <column datatype='real' name='NaOxam' ordinal='29' />
+            <column datatype='real' name='Rapa1' ordinal='30' />
+            <column datatype='real' name='rapa2' ordinal='31' />
+            <column datatype='real' name='Val' ordinal='32' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>groups</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[groups]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>groups</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X2dg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[X2dg]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>X2dg</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Am.Chl2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Am.Chl2]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Am.Chl2</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AMCL1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AMCL1]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>AMCL1</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AmT</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AmT]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>AmT</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aza1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[aza1]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>aza1</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aza2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Aza2]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Aza2</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bch</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[bch]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>bch</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bref.3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Bref.3]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Bref.3</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bref4</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Bref4]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Bref4</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BSO</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[BSO]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>BSO</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cad3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cad3]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>cad3</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cadm2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Cadm2]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Cadm2</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Citric</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Citric]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Citric</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CoCl</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CoCl]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>CoCl</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CoCl2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CoCl2]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>CoCl2</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DPHE.3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[DPHE.3]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>DPHE.3</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dphe1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dphe1]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>dphe1</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MelAB.1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MelAB.1]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>MelAB.1</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MelAB2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MelAB2]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>MelAB2</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MS</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MS]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>MS</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MSB3</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MSB3]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>MSB3</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>msb4</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[msb4]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>msb4</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>msb5</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[msb5]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>msb5</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NaBu</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NaBu]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>NaBu</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NaCl</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NaCl]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>NaCl</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NaLac</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NaLac]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>NaLac</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NaOthv</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NaOthv]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>NaOthv</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NaOxam</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NaOxam]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>NaOxam</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rapa1</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rapa1]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Rapa1</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rapa2</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rapa2]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>rapa2</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Val</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Val]</local-name>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias>Val</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data challenge test.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Amcl1' datatype='real' name='[AMCL1]' role='measure' type='quantitative' />
+      <column caption='Am T' datatype='real' name='[AmT]' role='measure' type='quantitative' />
+      <column aggregation='None' datatype='integer' name='[Cad3 (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-2' formula='[cad3]' peg='0' size-parameter='[Parameters].[Cad3 (bin) Parameter]' />
+      </column>
+      <column caption='Co Cl' datatype='real' name='[CoCl]' role='measure' type='quantitative' />
+      <column caption='Dphe.3' datatype='real' name='[DPHE.3]' role='measure' type='quantitative' />
+      <column caption='Msb3' datatype='real' name='[MSB3]' role='measure' type='quantitative' />
+      <column caption='Na Bu' datatype='real' name='[NaBu]' role='measure' type='quantitative' />
+      <column caption='Na Cl' datatype='real' name='[NaCl]' role='measure' type='quantitative' />
+      <column caption='Na Lac' datatype='real' name='[NaLac]' role='measure' type='quantitative' />
+      <column caption='Na Othv' datatype='real' name='[NaOthv]' role='measure' type='quantitative' />
+      <column caption='Na Oxam' datatype='real' name='[NaOxam]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Aza1' datatype='real' name='[aza1]' role='measure' type='quantitative' />
+      <column caption='Bch' datatype='real' name='[bch]' role='measure' type='quantitative' />
+      <column caption='Cad3' datatype='real' name='[cad3]' role='measure' type='quantitative' />
+      <column caption='Dphe1' datatype='real' name='[dphe1]' role='measure' type='quantitative' />
+      <column caption='Groups' datatype='integer' name='[groups]' role='measure' type='quantitative' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Msb4' datatype='real' name='[msb4]' role='measure' type='quantitative' />
+      <column caption='Msb5' datatype='real' name='[msb5]' role='measure' type='quantitative' />
+      <column caption='Rapa2' datatype='real' name='[rapa2]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.0825175' measure-ordering='alphabetic' measure-percentage='0.80979' parameter-percentage='0.107692' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='bin size' datatype='real' name='[Cad3 (bin) Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.050000000000000003'>
+          <calculation class='tableau' formula='0.050000000000000003' />
+          <range />
+        </column>
+      </datasource-dependencies>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Variable Distributions'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data challenge test' name='federated.1urdkbe1pkzyey17bllnm1t9cwxe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1urdkbe1pkzyey17bllnm1t9cwxe'>
+            <column caption='Amcl1' datatype='real' name='[AMCL1]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Am.Chl2]' role='measure' type='quantitative' />
+            <column caption='Am T' datatype='real' name='[AmT]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Aza2]' role='measure' type='quantitative' />
+            <column datatype='real' name='[BSO]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Bref.3]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Bref4]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Cadm2]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Citric]' role='measure' type='quantitative' />
+            <column datatype='real' name='[CoCl2]' role='measure' type='quantitative' />
+            <column caption='Co Cl' datatype='real' name='[CoCl]' role='measure' type='quantitative' />
+            <column caption='Dphe.3' datatype='real' name='[DPHE.3]' role='measure' type='quantitative' />
+            <column datatype='real' name='[MS]' role='measure' type='quantitative' />
+            <column datatype='real' name='[MelAB.1]' role='measure' type='quantitative' />
+            <column datatype='real' name='[MelAB2]' role='measure' type='quantitative' />
+            <column caption='Aza1' datatype='real' name='[aza1]' role='measure' type='quantitative' />
+            <column caption='Bch' datatype='real' name='[bch]' role='measure' type='quantitative' />
+            <column caption='Cad3' datatype='real' name='[cad3]' role='measure' type='quantitative' />
+            <column caption='Dphe1' datatype='real' name='[dphe1]' role='measure' type='quantitative' />
+            <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column-instance column='[id]' derivation='None' name='[none:id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[AMCL1]' derivation='Sum' name='[sum:AMCL1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Am.Chl2]' derivation='Sum' name='[sum:Am.Chl2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AmT]' derivation='Sum' name='[sum:AmT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Aza2]' derivation='Sum' name='[sum:Aza2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BSO]' derivation='Sum' name='[sum:BSO:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Bref.3]' derivation='Sum' name='[sum:Bref.3:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Bref4]' derivation='Sum' name='[sum:Bref4:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Cadm2]' derivation='Sum' name='[sum:Cadm2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Citric]' derivation='Sum' name='[sum:Citric:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CoCl2]' derivation='Sum' name='[sum:CoCl2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CoCl]' derivation='Sum' name='[sum:CoCl:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DPHE.3]' derivation='Sum' name='[sum:DPHE.3:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MS]' derivation='Sum' name='[sum:MS:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MelAB.1]' derivation='Sum' name='[sum:MelAB.1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MelAB2]' derivation='Sum' name='[sum:MelAB2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[aza1]' derivation='Sum' name='[sum:aza1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[bch]' derivation='Sum' name='[sum:bch:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cad3]' derivation='Sum' name='[sum:cad3:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[dphe1]' derivation='Sum' name='[sum:dphe1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='46' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AMCL1:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AMCL1:qk]' z-order='1' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Am.Chl2:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Am.Chl2:qk]' z-order='2' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline10' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl:qk]' z-order='11' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:DPHE.3:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline11' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:DPHE.3:qk]' z-order='12' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MS:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline12' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MS:qk]' z-order='13' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB.1:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline13' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB.1:qk]' z-order='14' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB2:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline14' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB2:qk]' z-order='15' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:aza1:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline15' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:aza1:qk]' z-order='16' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:bch:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline16' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:bch:qk]' z-order='17' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:cad3:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline17' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:cad3:qk]' z-order='18' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:dphe1:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline18' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:dphe1:qk]' z-order='19' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AmT:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline2' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AmT:qk]' z-order='3' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Aza2:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline3' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Aza2:qk]' z-order='4' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:BSO:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline4' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:BSO:qk]' z-order='5' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref.3:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline5' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref.3:qk]' z-order='6' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref4:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline6' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref4:qk]' z-order='7' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Cadm2:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline7' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Cadm2:qk]' z-order='8' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Citric:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline8' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Citric:qk]' z-order='9' />
+            <reference-line axis-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl2:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline9' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl2:qk]' z-order='10' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AMCL1:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Am.Chl2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AmT:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Aza2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:BSO:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref.3:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref4:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Cadm2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Citric:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='11' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='12' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:DPHE.3:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='13' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MS:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='14' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB.1:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='15' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB2:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='16' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:aza1:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='17' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:bch:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='18' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:cad3:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='19' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:dphe1:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AMCL1:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Am.Chl2:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:AmT:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Aza2:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:BSO:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref.3:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Bref4:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Cadm2:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Citric:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl2:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:CoCl:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:DPHE.3:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MS:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB.1:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:MelAB2:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:aza1:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:bch:qk] + ([federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:cad3:qk] + [federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:dphe1:qk]))))))))))))))))))</cols>
+      </table>
+    </worksheet>
+    <worksheet name='cad3 distrib'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data challenge test' name='federated.1urdkbe1pkzyey17bllnm1t9cwxe' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='bin size' datatype='real' name='[Cad3 (bin) Parameter]' param-domain-type='range' role='measure' type='quantitative' value='0.050000000000000003'>
+              <calculation class='tableau' formula='0.050000000000000003' />
+              <range />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1urdkbe1pkzyey17bllnm1t9cwxe'>
+            <column aggregation='None' datatype='integer' name='[Cad3 (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-2' formula='[cad3]' peg='0' size-parameter='[Parameters].[Cad3 (bin) Parameter]' />
+            </column>
+            <column caption='Cad3' datatype='real' name='[cad3]' role='measure' type='quantitative' />
+            <column-instance column='[cad3]' derivation='Count' name='[cnt:cad3:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Cad3 (bin)]' derivation='None' name='[none:Cad3 (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[cnt:cad3:qk]</rows>
+        <cols>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:Cad3 (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[Cad3 (bin)]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+    <worksheet name='cad3 v cadm2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data challenge test' name='federated.1urdkbe1pkzyey17bllnm1t9cwxe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1urdkbe1pkzyey17bllnm1t9cwxe'>
+            <column datatype='real' name='[Cadm2]' role='measure' type='quantitative' />
+            <column caption='Cad3' datatype='real' name='[cad3]' role='measure' type='quantitative' />
+            <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column-instance column='[id]' derivation='None' name='[none:id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Cadm2]' derivation='Sum' name='[sum:Cadm2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[cad3]' derivation='Sum' name='[sum:cad3:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' exclude-panes='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:Cadm2:qk]</rows>
+        <cols>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[sum:cad3:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Variable Distributions'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[:Measure Names]</field>
+            <field>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='cad3 distrib'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='type_in' param='[Parameters].[Cad3 (bin) Parameter]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' maximized='true' name='cad3 v cadm2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1urdkbe1pkzyey17bllnm1t9cwxe].[none:id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='105' name='Variable Distributions' width='192'>
+      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
+      orORbwAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='cad3 distrib' width='192'>
+      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
+      7T3cAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='cad3 v cadm2' width='192'>
+      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
+      YII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
