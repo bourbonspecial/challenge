@@ -6,6 +6,8 @@ import pandas as pd
 
 from sklearn import preprocessing
 
+from sklearn.tree import DecisionTreeClassifier
+
 F_DATA = r'data challenge test.csv'
 F_CORRELATIONS = r'correlations.csv'
 
@@ -28,9 +30,9 @@ def main():
 	y_train = y[:50]
 	y_test = y[50:]
 
-	print len(x_train), len(x_test)
-	print x_train.head()
-	print y_train.head()
+	clf = DecisionTreeClassifier().fit(x_train,y_train)
+
+	print clf.score(x_test,y_test)
 
 if __name__ == '__main__':
 	main()
