@@ -2,6 +2,11 @@
 
 __author__ = 'Remus Knowles <remknowles@gmail.com>'
 
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
+
 import pandas as pd
 
 from sklearn.decomposition import PCA
