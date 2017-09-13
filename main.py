@@ -4,6 +4,8 @@ __author__ = 'Remus Knowles <remknowles@gmail.com>'
 
 import pandas as pd
 
+from sklearn import preprocessing
+
 F_DATA = r'data challenge test.csv'
 F_CORRELATIONS = r'correlations.csv'
 
@@ -17,6 +19,9 @@ def main():
 
 	x = df['groups']
 	y = df.drop('groups', axis=1)
+
+	# Most data is already pretty well behaved but no harm in scaling.
+	preprocessing.scale(x)
 
 	x_train = x[:50]
 	x_test = x[50:]
