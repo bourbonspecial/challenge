@@ -9,27 +9,36 @@ from sklearn.model_selection import cross_val_score
 from sklearn import preprocessing
 
 # Classifiers
+from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.linear_model import SGDClassifier
-from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC, NuSVC, LinearSVC
 from sklearn.tree import DecisionTreeClassifier
 
 # Meta Estimators
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import AdaBoostClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 F_DATA = r'data challenge test.csv'
 F_CORRELATIONS = r'correlations.csv'
 
 ENABLE_SCALING = True
-PCA_COMPONENTS = 10 # None => don't do PCA
+PCA_COMPONENTS = None # None => don't do PCA
+CROSS_VALIDATION_ITERATIONS = 5
 
 models = [
 	# ('model_name', model class, shuffle)
 	('SGDClassifier', SGDClassifier, True),
+	('GaussianProcessClassifier', GaussianProcessClassifier, None),
+	('KNeighborsClassifier', KNeighborsClassifier, None),
 	('DecisionTreeClassifier', DecisionTreeClassifier, None),
 	('SVC', SVC, None),
-	('RandomForestClassifier', RandomForestClassifier, None),
+	('NuSVC', NuSVC, None),
+	('LinearSVC', LinearSVC, None),
 	('AdaBoostClassifier', AdaBoostClassifier, None),
+	('GradientBoostingClassifier', GradientBoostingClassifier, None),
+	('RandomForestClassifier', RandomForestClassifier, None),
 ]
 
 def main():
@@ -60,7 +69,7 @@ def main():
 		else:
 			clf = model()
 
-		scores = cross_val_score(clf, x, y, cv=20)
+		scores = cross_val_score(clf, x, y, cv=CROSS_VALIDATION_ITERATIONS)
 
 		# 95% confidence interval for scores.
 		print("%s Accuracy: %0.2f (+/- %0.2f)" % (model_name, scores.mean(), scores.std() * 2))
