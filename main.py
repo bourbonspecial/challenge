@@ -2,11 +2,6 @@
 
 __author__ = 'Remus Knowles <remknowles@gmail.com>'
 
-def warn(*args, **kwargs):
-    pass
-import warnings
-warnings.warn = warn
-
 import pandas as pd
 
 from sklearn.decomposition import PCA
@@ -15,7 +10,6 @@ from sklearn import preprocessing
 
 # Classifiers
 from sklearn.gaussian_process import GaussianProcessClassifier
-from sklearn.linear_model import SGDClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC, NuSVC, LinearSVC
 from sklearn.tree import DecisionTreeClassifier
@@ -24,6 +18,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import VotingClassifier
 
 F_DATA = r'data challenge test.csv'
 F_CORRELATIONS = r'correlations.csv'
@@ -33,17 +28,18 @@ PCA_COMPONENTS = None # None => don't do PCA
 CROSS_VALIDATION_ITERATIONS = 5
 
 models = [
-	# ('model_name', model class, shuffle)
-	('SGDClassifier', SGDClassifier, True),
-	('GaussianProcessClassifier', GaussianProcessClassifier, None),
-	('KNeighborsClassifier', KNeighborsClassifier, None),
-	('DecisionTreeClassifier', DecisionTreeClassifier, None),
-	('SVC', SVC, None),
-	('NuSVC', NuSVC, None),
-	('LinearSVC', LinearSVC, None),
-	('AdaBoostClassifier', AdaBoostClassifier, None),
-	('GradientBoostingClassifier', GradientBoostingClassifier, None),
-	('RandomForestClassifier', RandomForestClassifier, None),
+	# ('model_name', model class, shuffle, voting)
+	('GaussianProcessClassifier', GaussianProcessClassifier, True),
+	('KNeighborsClassifier', KNeighborsClassifier, True),
+	('DecisionTreeClassifier', DecisionTreeClassifier, True),
+	('SVC', SVC, True),
+	('NuSVC', NuSVC, True),
+	('LinearSVC', LinearSVC, True),
+	# Ensemble classifiers
+	('AdaBoostClassifier', AdaBoostClassifier, True),
+	('GradientBoostingClassifier', GradientBoostingClassifier, True),
+	('RandomForestClassifier', RandomForestClassifier, True),
+	('VotingClassifier', VotingClassifier, False),
 ]
 
 def main():
@@ -68,16 +64,20 @@ def main():
 		print pca.explained_variance_
 		print pca.explained_variance_ratio_
 
-	for model_name, model, shuffle in models:
-		if shuffle:
-			clf = model(shuffle=True)
-		else:
+	for model_name, model, voting in models:
+		# Bit hacky, bescause we could have a voting classifier here.
+		# Just so happens that we don't at the moment.
+		if voting:
 			clf = model()
+			scores = cross_val_score(clf, x, y, cv=CROSS_VALIDATION_ITERATIONS)
+			# 95% confidence interval for scores.
+			print("%s Accuracy: %0.2f (+/- %0.2f)" % (model_name, scores.mean(), scores.std() * 2))
 
-		scores = cross_val_score(clf, x, y, cv=CROSS_VALIDATION_ITERATIONS)
-
-		# 95% confidence interval for scores.
-		print("%s Accuracy: %0.2f (+/- %0.2f)" % (model_name, scores.mean(), scores.std() * 2))
+	# Need to do voting classifier seperately, as func signature is slightly different.
+	voting_clfs = [(model_name,model()) for model_name,model,voting in models if voting]
+	clf = VotingClassifier(estimators=voting_clfs,voting='hard')
+	scores = cross_val_score(clf, x, y, cv=CROSS_VALIDATION_ITERATIONS)
+	print("%s Accuracy: %0.2f (+/- %0.2f)" % ('VotingClassifier', scores.mean(), scores.std() * 2))
 
 if __name__ == '__main__':
 	main()
