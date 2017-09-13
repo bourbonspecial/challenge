@@ -28,7 +28,9 @@ def main():
 	y_train = y[:50]
 	y_test = y[50:]
 
-	
+	print len(x_train), len(x_test)
+	print x_train.head()
+	print y_train.head()
 
 if __name__ == '__main__':
 	main()
