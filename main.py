@@ -4,12 +4,29 @@ __author__ = 'Remus Knowles <remknowles@gmail.com>'
 
 import pandas as pd
 
+from sklearn.model_selection import cross_val_score
 from sklearn import preprocessing
 
+# Classifiers
+from sklearn.linear_model import SGDClassifier
+from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
+
+# Meta Estimators
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
 
 F_DATA = r'data challenge test.csv'
 F_CORRELATIONS = r'correlations.csv'
+
+models = [
+	# ('model_name', model class, shuffle)
+	('SGDClassifier', SGDClassifier, True),
+	('DecisionTreeClassifier', DecisionTreeClassifier, None),
+	('SVC', SVC, None),
+	('RandomForestClassifier', RandomForestClassifier, None),
+	('AdaBoostClassifier', AdaBoostClassifier, None),
+]
 
 def main():
 	df = pd.read_csv(F_DATA)
@@ -25,14 +42,16 @@ def main():
 	# Most data is already pretty well behaved but no harm in scaling.
 	preprocessing.scale(x)
 
-	x_train = x[:50]
-	x_test = x[50:]
-	y_train = y[:50]
-	y_test = y[50:]
+	for model_name, model, shuffle in models:
+		if shuffle:
+			clf = model(shuffle=True)
+		else:
+			clf = model()
 
-	clf = DecisionTreeClassifier().fit(x_train,y_train)
+		scores = cross_val_score(clf, x, y, cv=10)
 
-	print clf.score(x_test,y_test)
+		# 95% confidence interval for scores.
+		print("%s Accuracy: %0.2f (+/- %0.2f)" % (model_name, scores.mean(), scores.std() * 2))
 
 if __name__ == '__main__':
 	main()
