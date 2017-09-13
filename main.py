@@ -15,8 +15,17 @@ def main():
 	df = df[:60]
 	df_to_predict = df[60:]
 
-	# Check for any obvious correlation in explanatory variables.
-	print df.corr().to_csv(F_CORRELATIONS)
+	x = df['groups']
+	y = df.drop('groups', axis=1)
+
+	x_train = x[:50]
+	x_test = x[50:]
+	y_train = y[:50]
+	y_test = y[50:]
+
+	print len(x_train), len(x_test)
+	print x_train.head()
+	print y_train.head()
 
 if __name__ == '__main__':
 	main()
