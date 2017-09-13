@@ -4,6 +4,7 @@ __author__ = 'Remus Knowles <remknowles@gmail.com>'
 
 import pandas as pd
 
+from sklearn.decomposition import PCA
 from sklearn.model_selection import cross_val_score
 from sklearn import preprocessing
 
@@ -18,6 +19,9 @@ from sklearn.ensemble import AdaBoostClassifier
 
 F_DATA = r'data challenge test.csv'
 F_CORRELATIONS = r'correlations.csv'
+
+ENABLE_SCALING = True
+PCA_COMPONENTS = 10 # None => don't do PCA
 
 models = [
 	# ('model_name', model class, shuffle)
@@ -40,7 +44,15 @@ def main():
 	x = df.drop('groups', axis=1)
 
 	# Most data is already pretty well behaved but no harm in scaling.
-	preprocessing.scale(x)
+	if ENABLE_SCALING:
+		preprocessing.scale(x)
+
+	if PCA_COMPONENTS:
+		pca = PCA(n_components=PCA_COMPONENTS)
+		x = pca.fit_transform(x)
+
+		print pca.explained_variance_
+		print pca.explained_variance_ratio_
 
 	for model_name, model, shuffle in models:
 		if shuffle:
@@ -48,7 +60,7 @@ def main():
 		else:
 			clf = model()
 
-		scores = cross_val_score(clf, x, y, cv=10)
+		scores = cross_val_score(clf, x, y, cv=20)
 
 		# 95% confidence interval for scores.
 		print("%s Accuracy: %0.2f (+/- %0.2f)" % (model_name, scores.mean(), scores.std() * 2))
